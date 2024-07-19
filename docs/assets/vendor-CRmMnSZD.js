@@ -72754,7 +72754,7 @@ var ECe = function (t) {
     $j(window, 'resize', t);
   },
   MCe = function (t) {
-    $j(document.fonts, 'loadingdone', t);
+    $j(document.LibreChat/fonts, 'loadingdone', t);
   },
   RCe = ['cacheMeasurements', 'maxRows', 'minRows', 'onChange', 'onHeightChange'],
   CCe = function (t, r) {

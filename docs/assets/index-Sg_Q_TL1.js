@@ -23880,7 +23880,7 @@ function vv({
         children: t.jsx('div', {
           className: 'mt-12 h-24 w-full bg-cover',
           children: t.jsx('img', {
-            src: '/assets/logo.svg',
+            src: '/LibreChat/assets/logo.svg',
             className: 'h-full w-full object-contain',
             alt: 'Logo',
           }),
@@ -24231,19 +24231,19 @@ function xm({ circumference: e, offset: n, circleCSSProperties: o }) {
   });
 }
 const Av = {
-    [Ve.anyscale]: '/assets/anyscale.png',
-    [Ve.apipie]: '/assets/apipie.png',
-    [Ve.cohere]: '/assets/cohere.png',
-    [Ve.fireworks]: '/assets/fireworks.png',
-    [Ve.groq]: '/assets/groq.png',
-    [Ve.huggingface]: '/assets/huggingface.svg',
-    [Ve.mistral]: '/assets/mistral.png',
-    [Ve.mlx]: '/assets/mlx.png',
-    [Ve.ollama]: '/assets/ollama.png',
-    [Ve.openrouter]: '/assets/openrouter.png',
-    [Ve.perplexity]: '/assets/perplexity.png',
-    [Ve.shuttleai]: '/assets/shuttleai.png',
-    [Ve['together.ai']]: '/assets/together.png',
+    [Ve.anyscale]: '/LibreChat/assets/anyscale.png',
+    [Ve.apipie]: '/LibreChat/assets/apipie.png',
+    [Ve.cohere]: '/LibreChat/assets/cohere.png',
+    [Ve.fireworks]: '/LibreChat/assets/fireworks.png',
+    [Ve.groq]: '/LibreChat/assets/groq.png',
+    [Ve.huggingface]: '/LibreChat/assets/huggingface.svg',
+    [Ve.mistral]: '/LibreChat/assets/mistral.png',
+    [Ve.mlx]: '/LibreChat/assets/mlx.png',
+    [Ve.ollama]: '/LibreChat/assets/ollama.png',
+    [Ve.openrouter]: '/LibreChat/assets/openrouter.png',
+    [Ve.perplexity]: '/LibreChat/assets/perplexity.png',
+    [Ve.shuttleai]: '/LibreChat/assets/shuttleai.png',
+    [Ve['together.ai']]: '/LibreChat/assets/together.png',
   },
   Tv = { [Ve.cohere]: { [qs.landing]: 'p-2' } },
   Iv = ({ currentEndpoint: e, context: n = '', className: o }) => {
@@ -24343,8 +24343,8 @@ const vm = (e) => {
         },
         [N.bingAI]: {
           icon: s
-            ? t.jsx('img', { src: '/assets/bingai-jb.png', alt: 'Bing Icon' })
-            : t.jsx('img', { src: '/assets/bingai.png', alt: 'Sydney Icon' }),
+            ? t.jsx('img', { src: '/LibreChat/assets/bingai-jb.png', alt: 'Bing Icon' })
+            : t.jsx('img', { src: '/LibreChat/assets/bingai.png', alt: 'Sydney Icon' }),
           name: s ? 'Sydney' : 'BingAI',
         },
         [N.chatGPTBrowser]: {
