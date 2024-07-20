@@ -22,64 +22,69 @@ const AuthLayout = () => (
   </AuthContextProvider>
 );
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: 'share/:shareId',
+      element: <ShareRoute />,
+    },
+    {
+      path: '/',
+      element: <StartupLayout />,
+      children: [
+        {
+          path: 'register',
+          element: <Registration />,
+        },
+        {
+          path: 'forgot-password',
+          element: <RequestPasswordReset />,
+        },
+        {
+          path: 'reset-password',
+          element: <ResetPassword />,
+        },
+      ],
+    },
+    {
+      path: 'verify',
+      element: <VerifyEmail />,
+    },
+    {
+      element: <AuthLayout />,
+      children: [
+        {
+          path: '/',
+          element: <LoginLayout />,
+          children: [
+            {
+              path: 'login',
+              element: <Login />,
+            },
+          ],
+        },
+        {
+          path: '/',
+          element: <Root />,
+          children: [
+            {
+              index: true,
+              element: <Navigate to="/c/new" replace={true} />,
+            },
+            {
+              path: 'c/:conversationId?',
+              element: <ChatRoute />,
+            },
+            {
+              path: 'search',
+              element: <Search />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: 'share/:shareId',
-    element: <ShareRoute />,
+    basename: 'LibreChat',
   },
-  {
-    path: '/',
-    element: <StartupLayout />,
-    children: [
-      {
-        path: 'register',
-        element: <Registration />,
-      },
-      {
-        path: 'forgot-password',
-        element: <RequestPasswordReset />,
-      },
-      {
-        path: 'reset-password',
-        element: <ResetPassword />,
-      },
-    ],
-  },
-  {
-    path: 'verify',
-    element: <VerifyEmail />,
-  },
-  {
-    element: <AuthLayout />,
-    children: [
-      {
-        path: '/',
-        element: <LoginLayout />,
-        children: [
-          {
-            path: 'login',
-            element: <Login />,
-          },
-        ],
-      },
-      {
-        path: '/',
-        element: <Root />,
-        children: [
-          {
-            index: true,
-            element: <Navigate to="/c/new" replace={true} />,
-          },
-          {
-            path: 'c/:conversationId?',
-            element: <ChatRoute />,
-          },
-          {
-            path: 'search',
-            element: <Search />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+);
