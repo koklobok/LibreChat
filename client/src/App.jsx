@@ -11,6 +11,7 @@ import Toast from './components/ui/Toast';
 import { router } from './routes';
 
 const App = () => {
+  console.log('start app');
   const { setError } = useApiErrorBoundary();
 
   const queryClient = new QueryClient({

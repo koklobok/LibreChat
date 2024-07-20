@@ -85,6 +85,6 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    basename: 'LibreChat',
+    basename: '/LibreChat',
   },
 );
